@@ -1,0 +1,26 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class IdNumberGemeration {
+	
+	public static int getRandomNumberFrom(int min, int max) {
+        Random foo = new Random();
+        int randomNumber = foo.nextInt((max + 1) - min) + min;
+        return randomNumber;
+
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num= getRandomNumberFrom(6, 15);
+		Scanner sc= new Scanner(System.in);
+		System.out.println("Enter name");
+		//Object string;
+		String name= sc.next();
+		
+		String id=  num+name;
+		System.out.println(id);
+		
+	}
+
+}
